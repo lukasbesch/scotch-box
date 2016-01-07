@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "scotchbox"
     config.vm.synced_folder ".", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
     
-    config.vm.provision "custom scripts", type: "shell" do |s|
+    config.vm.provision "shell" do |s|
       s.path = "provision/setup.sh"
       s.privileged = true
       s.keep_color = true
