@@ -5,11 +5,13 @@ cd /var/www
 
 # Copy configuration files
 cp provision/multihost.conf /etc/apache2/sites-available
+cp provision/scotchbox.local.conf /etc/apache2/sites-available
 
 a2enmod vhost_alias
 
-a2ensite multihost.conf
-a2dissite 000-default.conf
+a2ensite multihost
+a2ensite scotchbox.local
+a2dissite 000-default
 
 service apache2 restart
 
