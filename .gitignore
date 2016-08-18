@@ -4,3 +4,4 @@
 hosts/*
 !hosts/default/public/index.php
 
+current-dump.sql
