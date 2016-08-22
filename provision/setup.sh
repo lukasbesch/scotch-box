@@ -2,8 +2,8 @@
 sudo sed -i '/tty/!s/mesg n/tty -s \\&\\& mesg n/' /root/.profile
 
 # Copy configuration files
-cp provision/multihost.conf /etc/apache2/sites-available
-cp provision/scotchbox.local.conf /etc/apache2/sites-available
+cp /var/www/provision/multihost.conf /etc/apache2/sites-available
+cp /var/www/provision/scotchbox.local.conf /etc/apache2/sites-available
 
 a2enmod vhost_alias
 
